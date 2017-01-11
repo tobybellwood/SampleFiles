@@ -34,6 +34,11 @@ https://ecouncil.portenf.sa.gov.au/arcgis/rest/services
 http://chccmaps.coffsharbour.nsw.gov.au:8080/arcgis/rest/services/
 http://maps.hornsby.nsw.gov.au/arcgis/rest/services/
 
+http://data-1.hobartcc.opendata.arcgis.com/data.json
+http://lcc.launceston.opendata.arcgis.com/data.json
+http://data.logancity.opendata.arcgis.com/data.json
+http://data.moretonbay.qld.gov.au/data.json
+http://data.goldcoast.opendata.arcgis.com/data.json
 
 
 
