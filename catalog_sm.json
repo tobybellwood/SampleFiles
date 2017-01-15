@@ -54,6 +54,22 @@
 				"colorPalette": "5-class PuBu"
 			}
 		},
+		{
+			"name": "2016 Election 2PP by Division",
+			"type": "csv",
+			"url": "http://data.gov.au/dataset/25e81c18-2083-4abe-81b6-0f530053c63f/resource/9f10b598-fbbb-4028-a982-80d317de7c34/download/taxstats2014individual27selectedaveragesandmediansbypostcode.csv",
+			"tableStyle": {
+				"dataVariable": "Australian Labor Party Percentage",
+				"timeColumn": null,
+				"colorBins": [0,
+				40,
+				44,
+				50,
+				56,
+				60],
+				"colorPalette": "6-class PuBu"
+			}
+		},
 		],
 		
 	},
