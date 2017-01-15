@@ -59,7 +59,7 @@
 			"type": "csv",
 			"url": "https://raw.githubusercontent.com/tobybellwood/SampleFiles/master/HouseTppByDivisionDownload-20499.csv",
 			"tableStyle": {
-				"dataVariable": "Australian Labor Party Percentage",
+				"dataVariable": "Liberal/National Coalition Percentage",
 				"timeColumn": null,
 				"colorBins": [0,
 				40,
@@ -67,7 +67,7 @@
 				50,
 				56,
 				60],
-				"colorPalette": "Blue-Red"
+				"colorPalette": "RdBu"
 			}
 		},
 		],
