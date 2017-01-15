@@ -14,8 +14,8 @@
 	"data.melbourne.vic.gov.au",
 	"data.act.gov.au"],
 	"catalog": [{
-		"name": "Smple Catalog",
-		"id": "Root Group/National Data Sets",
+		"name": "Sample Catalog Item",
+		"id": "Root Group/Sample Catalog Item",
 		"type": "group",
 		"items": [{
 			"name": "Taxation Statistics 2011-2012",
