@@ -37,11 +37,19 @@ http://maps.hornsby.nsw.gov.au/arcgis/rest/services/
 http://data-1.hobartcc.opendata.arcgis.com/data.json
 http://lcc.launceston.opendata.arcgis.com/data.json
 http://data.logancity.opendata.arcgis.com/data.json
-http://data.moretonbay.qld.gov.au/data.json
+http://data.moretonbay.qld.gov.au/data.json | http://data.mbrc.opendata.arcgis.com/data.json
 http://data.goldcoast.opendata.arcgis.com/data.json
 http://data.portenf.opendata.arcgis.com/data.json
 http://vicroadsopendata.vicroadsmaps.opendata.arcgis.com/data.json
 http://data.esta000.opendata.arcgis.com/data.json
+http://atlas.acsqhc.opendata.arcgis.com/data.json
+http://actmapi.actgov.opendata.arcgis.com/data.json
+http://data.dhs.opendata.arcgis.com/data.json
+http://portal.mainroads.opendata.arcgis.com/data.json
+http://data.melbournewater.opendata.arcgis.com/data.json
+http://data.planvic.opendata.arcgis.com/data.json
+http://data.vicforeststrp.opendata.arcgis.com/data.json
+http://public.qmdc.opendata.arcgis.com/data.json
 
 http://www.data.act.gov.au/data.json
 https://data.melbourne.vic.gov.au/data.json
