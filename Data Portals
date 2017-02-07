@@ -57,3 +57,25 @@ https://data.melbourne.vic.gov.au/data.json
 https://data.sunshinecoast.qld.gov.au/data.json
 
 
+#/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
+
+http://find.ga.gov.au/FIND/geonetwork/srv/eng/csw
+http://www.ga.gov.au/geonetwork/srv/en/csw
+http://ecat.ga.gov.au/geonetwork/srv/eng/csw
+http://portal.geoscience.gov.au/geonetwork/srv/eng/csw
+http://spatial.ala.org.au/geonetwork/srv/eng/csw
+http://www.bom.gov.au/geonetwork/srv/eng/csw
+http://data.aims.gov.au/geonetwork/srv/eng/csw
+http://catalogue.aodn.org.au/geonetwork/srv/eng/csw
+http://www.marlin.csiro.au/geonetwork/srv/eng/csw
+http://geonetwork.tern.org.au/geonetwork/srv/eng/csw
+http://data.auscover.org.au/geonetwork/srv/eng/csw
+http://www.mrt.tas.gov.au/web-catalogue/srv/eng/csw
+https://data.thelist.tas.gov.au:443/datagn/srv/eng/csw
+https://sdi.nsw.gov.au/csw
+http://eatlas.org.au/geonetwork/srv/eng/csw
+http://geonetwork.nci.org.au/geonetwork/srv/eng/csw
+http://portal.auscope.org/geonetwork/srv/eng/csw
+http://geology.data.vic.gov.au/geonetwork3/srv/eng/csw
+http://pcimp.aims.gov.au/geonetwork/srv/eng/csw
+http://nrmdatalibrary.dpiw.tas.gov.au/geonetwork/srv/en/csw
