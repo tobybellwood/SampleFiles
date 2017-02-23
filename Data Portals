@@ -68,13 +68,16 @@ http://www.bom.gov.au/geonetwork/srv/eng/csw
 http://data.aims.gov.au/geonetwork/srv/eng/csw
 http://catalogue.aodn.org.au/geonetwork/srv/eng/csw
 http://www.marlin.csiro.au/geonetwork/srv/eng/csw
-http://geonetwork.tern.org.au/geonetwork/srv/eng/csw
-http://data.auscover.org.au/geonetwork/srv/eng/csw
 http://www.mrt.tas.gov.au/web-catalogue/srv/eng/csw
 https://data.thelist.tas.gov.au:443/datagn/srv/eng/csw
 https://sdi.nsw.gov.au/csw
 http://eatlas.org.au/geonetwork/srv/eng/csw
-http://geonetwork.nci.org.au/geonetwork/srv/eng/csw
+
+http://geonetwork.tern.org.au/geonetwork/srv/eng/csw
++http://data.auscover.org.au/geonetwork/srv/eng/csw (to be retired)
++http://geonetwork.nci.org.au/geonetwork/srv/eng/csw
++https://acef.tern.org.au/geonetwork/srv/eng/
+
 http://portal.auscope.org/geonetwork/srv/eng/csw
 http://geology.data.vic.gov.au/geonetwork3/srv/eng/csw
 http://pcimp.aims.gov.au/geonetwork/srv/eng/csw
