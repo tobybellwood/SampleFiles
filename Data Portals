@@ -40,6 +40,7 @@ http://data.logancity.opendata.arcgis.com/data.json
 http://data.moretonbay.qld.gov.au/data.json | http://data.mbrc.opendata.arcgis.com/data.json
 http://data.goldcoast.opendata.arcgis.com/data.json
 http://data.portenf.opendata.arcgis.com/data.json
+http://city-manningham.opendata.arcgis.com/data.json
 http://vicroadsopendata.vicroadsmaps.opendata.arcgis.com/data.json
 http://data.esta000.opendata.arcgis.com/data.json
 http://atlas.acsqhc.opendata.arcgis.com/data.json
@@ -51,6 +52,8 @@ http://data.planvic.opendata.arcgis.com/data.json
 http://data.vicforeststrp.opendata.arcgis.com/data.json
 http://public.qmdc.opendata.arcgis.com/data.json
 https://opendata.transport.nsw.gov.au/data.json
+http://atlas-cynrm.opendata.arcgis.com/data.json
+http://data-ymac.opendata.arcgis.com/data.json
 
 http://www.data.act.gov.au/data.json
 https://data.melbourne.vic.gov.au/data.json
