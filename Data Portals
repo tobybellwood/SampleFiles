@@ -58,6 +58,7 @@ http://data-ymac.opendata.arcgis.com/data.json
 http://www.data.act.gov.au/data.json
 https://data.melbourne.vic.gov.au/data.json
 https://data.sunshinecoast.qld.gov.au/data.json
+https://performance.action.act.gov.au/data.json
 
 
 #/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetCapabilities
