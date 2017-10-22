@@ -1,0 +1,22 @@
+#!/bin/bash
+
+sudo add-apt-repository ppa:ondrej/php -y
+sudo apt-get update -y
+sudo apt-get install php7.1-bz2 php7.1-curl php7.1-cli php7.1-dev php7.1-gd php7.1-intl php7.1-mcrypt php7.1-json php7.1-mysql php7.1-opcache php7.1-bcmath php7.1-mbstring php7.1-soap php7.1-xml php7.1-zip -y
+sudo apt-get remove libapache2-mod-php5 -y
+sudo apt-get install libapache2-mod-php7.1 -y
+sudo apt-get autoremove -y
+
+
+
+composer global require "hirak/prestissimo:^0.3"
+composer global require "drush/drush:9.0.0-beta6"
+echo 'export PATH="$HOME/.composer/vendor/bin:$PATH"' >> .bashrc
+. ~/.bashrc
+
+composer require drupal/dvf drupal/dvf_ckan drupal/dvf_csv drupal/ckan_connect
+
+git checkout -- .
+sudo git clean -dfx
+sudo mysqladmin drop c9
+git fetch origin
