@@ -12,8 +12,7 @@
                 "curl.*https://github.com/hechoendrupal/drupal-console-launcher/releases/download/(?<currentValue>.*?)/drupal.phar.*\n"
             ],
             "depNameTemplate": "hechoendrupal/drupal-console-launcher",
-            "datasourceTemplate": "github-releases",
-            "groupName": "CLI dependency updates"
+            "datasourceTemplate": "github-releases"
         },
         {
             "fileMatch": [
@@ -23,8 +22,7 @@
                 "php.*--require=drush/drush:(?<currentValue>.*?).*\n"
             ],
             "depNameTemplate": "drush/drush",
-            "datasourceTemplate": "packagist",
-            "groupName": "CLI dependency updates"
+            "datasourceTemplate": "packagist"
         },
         {
             "fileMatch": [
@@ -34,8 +32,7 @@
                 "wget.*https://github.com/drush-ops/drush-launcher/releases/download/(?<currentValue>.*?)/drush.phar.*\n"
             ],
             "depNameTemplate": "drush-ops/drush-launcher",
-            "datasourceTemplate": "github-releases",
-            "groupName": "CLI dependency updates"
+            "datasourceTemplate": "github-releases"
         }
     ],
     "packageRules": [
