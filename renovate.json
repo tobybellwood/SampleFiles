@@ -5,9 +5,16 @@
   "regexManagers": [
     {
       "fileMatch": ["(^|/)Dockerfile.php$"],
-      "matchStrings": ["FROM (?<depName>.*?):[0-9,.]*-(cli-drupal|cli|fpm)-v(?<currentValue>.*)"],
+      "matchStrings": ["FROM (?<depName>.*?):(?<currentValue>.*)"],
       "datasourceTemplate": "docker",
-      "versioningTemplate": "semver"
+      "versioningTemplate": "regex"
+    }
+  ],
+  "packageRules": [
+    {
+      "datasources": ["docker"],
+      "packageNames": ["amazeeio/php"],
+      "versioning": "regex:^(?<compatibility>.*)-v(?<major>\\d+)(\\.(?<minor>\\d+))?(\\.(?<patch>\\d+))?$"
     }
   ]
 }
