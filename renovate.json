@@ -4,9 +4,10 @@
   ],
   "regexManagers": [
     {
-      "fileMatch": ["^Dockerfile.php$"],
-      "matchStrings": ["FROM (?<depName>.*?):[0-9,.]*-(cli-drupal|cli|fpm)-v(?<currentValue>.*)$"],
-      "datasourceTemplate": "docker"
+      "fileMatch": ["(^|/)Dockerfile.php$"],
+      "matchStrings": ["FROM (?<depName>.*?):[0-9,.]*-(cli-drupal|cli|fpm)-v(?<currentValue>.*)"],
+      "datasourceTemplate": "docker",
+      "versioningTemplate": "semver"
     }
   ]
 }
