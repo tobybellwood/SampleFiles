@@ -20,7 +20,7 @@
                 "^Dockerfile.php-cli$"
             ],
             "matchStrings": [
-                "php.*--require=(?<depName>.*?):(?<currentValue>.*?).*\n"
+                "php.*--require=(?<depName>.*?):(?<currentValue>.*?)\\s.*\n"
             ],
             "datasourceTemplate": "packagist"
         },
