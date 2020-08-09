@@ -1,42 +1,62 @@
 {
-  "extends": [
-    "config:base"
-  ],
-  "separateMinorPatch": "true",
-  "regexManagers": [
-    {
-      "fileMatch": ["^Dockerfile$"],
-      "matchStrings": ["curl.*https://github.com/hechoendrupal/drupal-console-launcher/releases/download/(?<currentValue>.*?)/drupal.phar.*\n"],
-      "depNameTemplate": "hechoendrupal/drupal-console-launcher",
-      "datasourceTemplate": "github-releases",
-      "groupName": "CLI dependency updates"
-    },
-    {
-      "fileMatch": ["^Dockerfile$"],
-      "matchStrings": ["php.*--require=drush/drush:(?<currentValue>.*?).*\n"],
-      "depNameTemplate": "drush/drush",
-      "datasourceTemplate": "packagist",
-      "groupName": "CLI dependency updates"
-    },
-    {
-      "fileMatch": ["^Dockerfile$"],
-      "matchStrings": ["wget.*https://github.com/drush-ops/drush-launcher/releases/download/(?<currentValue>.*?)/drush.phar.*\n"],
-      "depNameTemplate": "drush-ops/drush-launcher",
-      "datasourceTemplate": "github-releases",
-      "groupName": "CLI dependency updates"
-    },
-  ],
-  "packageRules": [
-    {
-      "datasources": ["docker"],
-      "packageNames": ["amazeeio/php"],
-      "versioning": "regex:^(?<compatibility>.*)-v(?<major>\\d+)(\\.(?<minor>\\d+))?(\\.(?<patch>\\d+))?$"
-    },
-    {
-      "datasources": ["docker"],
-      "packagePatterns": ["^amazeeiolagoon"],
-      "versioning": "regex:^v(?<major>\\d+)(-(?<minor>\\d+))?(-(?<patch>\\d+))?$",
-      "groupName": "Lagoon-core updates"
-    }
-  ]
+    "extends": [
+        "config:base"
+    ],
+    "separateMinorPatch": "true",
+    "regexManagers": [
+        {
+            "fileMatch": [
+                "^Dockerfile$"
+            ],
+            "matchStrings": [
+                "curl.*https://github.com/hechoendrupal/drupal-console-launcher/releases/download/(?<currentValue>.*?)/drupal.phar.*\n"
+            ],
+            "depNameTemplate": "hechoendrupal/drupal-console-launcher",
+            "datasourceTemplate": "github-releases",
+            "groupName": "CLI dependency updates"
+        },
+        {
+            "fileMatch": [
+                "^Dockerfile$"
+            ],
+            "matchStrings": [
+                "php.*--require=drush/drush:(?<currentValue>.*?).*\n"
+            ],
+            "depNameTemplate": "drush/drush",
+            "datasourceTemplate": "packagist",
+            "groupName": "CLI dependency updates"
+        },
+        {
+            "fileMatch": [
+                "^Dockerfile$"
+            ],
+            "matchStrings": [
+                "wget.*https://github.com/drush-ops/drush-launcher/releases/download/(?<currentValue>.*?)/drush.phar.*\n"
+            ],
+            "depNameTemplate": "drush-ops/drush-launcher",
+            "datasourceTemplate": "github-releases",
+            "groupName": "CLI dependency updates"
+        }
+    ],
+    "packageRules": [
+        {
+            "datasources": [
+                "docker"
+            ],
+            "packageNames": [
+                "amazeeio/php"
+            ],
+            "versioning": "regex:^(?<compatibility>.*)-v(?<major>\\d+)(\\.(?<minor>\\d+))?(\\.(?<patch>\\d+))?$"
+        },
+        {
+            "datasources": [
+                "docker"
+            ],
+            "packagePatterns": [
+                "^amazeeiolagoon"
+            ],
+            "versioning": "regex:^v(?<major>\\d+)(-(?<minor>\\d+))?(-(?<patch>\\d+))?$",
+            "groupName": "Lagoon-core updates"
+        }
+    ]
 }
