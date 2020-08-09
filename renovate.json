@@ -1,12 +1,13 @@
 {
-    "extends": [
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
         "config:base"
     ],
-    "separateMinorPatch": "true",
+    "separateMinorPatch": true,
     "regexManagers": [
         {
             "fileMatch": [
-                "^Dockerfile$"
+                "^Dockerfile.php-cli$"
             ],
             "matchStrings": [
                 "curl.*https://github.com/hechoendrupal/drupal-console-launcher/releases/download/(?<currentValue>.*?)/drupal.phar.*\n"
@@ -16,7 +17,7 @@
         },
         {
             "fileMatch": [
-                "^Dockerfile$"
+                "^Dockerfile.php-cli$"
             ],
             "matchStrings": [
                 "php.*--require=drush/drush:(?<currentValue>.*?).*\n"
@@ -26,7 +27,7 @@
         },
         {
             "fileMatch": [
-                "^Dockerfile$"
+                "^Dockerfile.php-cli$"
             ],
             "matchStrings": [
                 "wget.*https://github.com/drush-ops/drush-launcher/releases/download/(?<currentValue>.*?)/drush.phar.*\n"
