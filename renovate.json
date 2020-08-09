@@ -1,6 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "enabledManagers": ["regex"],
   "extends": [
         "config:base"
     ],
@@ -24,7 +23,7 @@
                 "php.*--require=drush/drush:(?<currentValue>.*?).*\n"
             ],
             "depNameTemplate": "drush/drush",
-            "datasourceTemplate": "packagist"
+            "datasourceTemplate": "github-releases"
         },
         {
             "fileMatch": [
