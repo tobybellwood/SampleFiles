@@ -1,5 +1,12 @@
 {
   "extends": [
     "config:base"
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["^Dockerfile.php$"],
+      "matchStrings": ["(?<depname>.*?):[0-9,.]*-(cli-drupal|cli|fpm|)-(?<currentvalue>.*?)"],
+      "datasourceTemplate": "docker"
+    }
   ]
 }
