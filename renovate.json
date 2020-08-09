@@ -5,7 +5,7 @@
   "regexManagers": [
     {
       "fileMatch": ["^Dockerfile.php$"],
-      "matchStrings": ["FROM (?<depname>.*?):[0-9,.]*-(cli-drupal|cli|fpm)-v(?<currentvalue>.*)$"],
+      "matchStrings": ["FROM (?<depName>.*?):[0-9,.]*-(cli-drupal|cli|fpm)-v(?<currentValue>.*)$"],
       "datasourceTemplate": "docker"
     }
   ]
