@@ -2,19 +2,16 @@
   "extends": [
     "config:base"
   ],
-  "regexManagers": [
-    {
-      "fileMatch": ["(^|/)Dockerfile.php$"],
-      "matchStrings": ["FROM (?<depName>.*?):(?<currentValue>.*)"],
-      "datasourceTemplate": "docker",
-      "versioningTemplate": "regex"
-    }
-  ],
   "packageRules": [
     {
       "datasources": ["docker"],
       "packageNames": ["amazeeio/php"],
       "versioning": "regex:^(?<compatibility>.*)-v(?<major>\\d+)(\\.(?<minor>\\d+))?(\\.(?<patch>\\d+))?$"
+    },
+    {
+      "datasources": ["docker"],
+      "packagePatterns": ["^amazeeiolagoon"],
+      "versioning": "regex:^v(?<major>\\d+)(-(?<minor>\\d+))?(-(?<patch>\\d+))?$"
     }
   ]
 }
