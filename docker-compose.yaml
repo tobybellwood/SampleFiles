@@ -1,7 +1,7 @@
 version: '3.2'
 services:
   api-db:
-    image: amazeeiolagoon/api-db:master
+    image: amazeeiolagoon/api-db:v1-8-1
     #volumes:
       ##- ./services/api-db/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
       ##- ./services/api-db/rerun_initdb.sh:/rerun_initdb.sh
@@ -12,7 +12,7 @@ services:
       lagoon.template: services/api-db/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/api-db:v1-8-2
   webhook-handler:
-    image: amazeeiolagoon/webhook-handler:master
+    image: amazeeiolagoon/webhook-handler:v1-8-1
     command: yarn run dev
     ports:
       - '7777:3000'
@@ -24,7 +24,7 @@ services:
       lagoon.template: services/webhook-handler/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/webhook-handler:v1-8-2
   backup-handler:
-    image: amazeeiolagoon/backup-handler:master
+    image: amazeeiolagoon/backup-handler:v1-8-1
     restart: on-failure
     ports:
       - '7778:3000'
@@ -35,7 +35,7 @@ services:
     depends_on:
       - broker
   broker:
-    image: amazeeiolagoon/broker-single:master
+    image: amazeeiolagoon/broker-single:v1-8-1
     ports:
       - '15672:15672'
       - '5672:5672'
@@ -44,7 +44,7 @@ services:
       lagoon.template: services/broker/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/broker:v1-8-2
   kubernetesmisc:
-    image: amazeeiolagoon/kubernetesmisc:master
+    image: amazeeiolagoon/kubernetesmisc:v1-8-1
     command: yarn run dev
     #volumes:
       #- ./services/kubernetesmisc/src:/app/services/kubernetesmisc/src
@@ -54,7 +54,7 @@ services:
       lagoon.template: services/kubernetesmisc/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/kubernetesmisc:v1-8-2
   kubernetesbuilddeploy:
-    image: amazeeiolagoon/kubernetesbuilddeploy:master
+    image: amazeeiolagoon/kubernetesbuilddeploy:v1-8-1
     command: yarn run dev
     environment:
       - CI=${CI:-true}
@@ -67,7 +67,7 @@ services:
       lagoon.template: services/kubernetesbuilddeploy/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/kubernetesbuilddeploy:v1-8-2
   kubernetesdeployqueue:
-    image: amazeeiolagoon/kubernetesdeployqueue:master
+    image: amazeeiolagoon/kubernetesdeployqueue:v1-8-1
     command: yarn run dev
     #volumes:
       #- ./services/kubernetesdeployqueue/src:/app/services/kubernetesdeployqueue/src
@@ -77,7 +77,7 @@ services:
       lagoon.template: services/kubernetesdeployqueue/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/kubernetesdeployqueue:v1-8-2
   kubernetesbuilddeploymonitor:
-    image: amazeeiolagoon/kubernetesbuilddeploymonitor:master
+    image: amazeeiolagoon/kubernetesbuilddeploymonitor:v1-8-1
     command: yarn run dev
     #volumes:
       #- ./services/kubernetesbuilddeploymonitor/src:/app/services/kubernetesbuilddeploymonitor/src
@@ -91,7 +91,7 @@ services:
       lagoon.template: services/kubernetesbuilddeploymonitor/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/kubernetesbuilddeploymonitor:v1-8-2
   kubernetesjobs:
-    image: amazeeiolagoon/kubernetesjobs:master
+    image: amazeeiolagoon/kubernetesjobs:v1-8-1
     command: yarn run dev
     #volumes:
       #- ./services/kubernetesjobs/src:/app/services/kubernetesjobs/src
@@ -105,7 +105,7 @@ services:
       lagoon.template: services/kubernetesjobs/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/kubernetesjobs:v1-8-2
   kubernetesjobsmonitor:
-    image: amazeeiolagoon/kubernetesjobsmonitor:master
+    image: amazeeiolagoon/kubernetesjobsmonitor:v1-8-1
     command: yarn run dev
     #volumes:
       #- ./services/kubernetesjobsmonitor/src:/app/services/kubernetesjobsmonitor/src
@@ -119,7 +119,7 @@ services:
       lagoon.template: services/kubernetesjobsmonitor/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/kubernetesjobsmonitor:v1-8-2
   kubernetesremove:
-    image: amazeeiolagoon/kubernetesremove:master
+    image: amazeeiolagoon/kubernetesremove:v1-8-1
     command: yarn run dev
     #volumes:
       #- ./services/kubernetesremove/src:/app/services/kubernetesremove/src
@@ -129,7 +129,7 @@ services:
       lagoon.template: services/kubernetesremove/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/kubernetesremove:v1-8-2
   logs2rocketchat:
-    image: amazeeiolagoon/logs2rocketchat:master
+    image: amazeeiolagoon/logs2rocketchat:v1-8-1
     command: yarn run dev
     #volumes:
       #- ./services/logs2rocketchat/src:/app/services/logs2rocketchat/src
@@ -139,7 +139,7 @@ services:
       lagoon.template: services/logs2rocketchat/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/logs2rocketchat:v1-8-2
   logs2slack:
-    image: amazeeiolagoon/logs2slack:master
+    image: amazeeiolagoon/logs2slack:v1-8-1
     command: yarn run dev
     #volumes:
       #- ./services/logs2slack/src:/app/services/logs2slack/src
@@ -149,7 +149,7 @@ services:
       lagoon.template: services/logs2slack/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/logs2slack:v1-8-2
   logs2microsoftteams:
-    image: amazeeiolagoon/logs2microsoftteams:master
+    image: amazeeiolagoon/logs2microsoftteams:v1-8-1
     command: yarn run dev
     #volumes:
       #- ./services/logs2microsoftteams/src:/app/services/logs2microsoftteams/src
@@ -159,7 +159,7 @@ services:
       lagoon.template: services/logs2microsoftteams/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/logs2microsoftteams:v1-8-2
   logs2email:
-    image: amazeeiolagoon/logs2email:master
+    image: amazeeiolagoon/logs2email:v1-8-1
     command: yarn run dev
     #volumes:
       #- ./services/logs2email/src:/app/services/logs2email/src
@@ -177,7 +177,7 @@ services:
     labels:
       lagoon.type: none
   webhooks2tasks:
-    image: amazeeiolagoon/webhooks2tasks:master
+    image: amazeeiolagoon/webhooks2tasks:v1-8-1
     command: yarn run dev
     #volumes:
       #- ./services/webhooks2tasks/src:/app/services/webhooks2tasks/src
@@ -187,7 +187,7 @@ services:
       lagoon.template: services/webhooks2tasks/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/webhooks2tasks:v1-8-2
   api:
-    image: amazeeiolagoon/api:master
+    image: amazeeiolagoon/api:v1-8-1
     command: yarn run dev
     #volumes:
       #- ./services/api/src:/app/services/api/src
@@ -206,7 +206,7 @@ services:
       lagoon.template: services/api/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/api:v1-8-2
   ui:
-    image: amazeeiolagoon/ui:master
+    image: amazeeiolagoon/ui:v1-8-1
     command: yarn run dev
     #volumes:
       #- ./services/ui/src:/app/services/ui/src
@@ -220,7 +220,7 @@ services:
       lagoon.template: services/ui/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/ui:v1-8-2
   ssh:
-    image: amazeeiolagoon/ssh:master
+    image: amazeeiolagoon/ssh:v1-8-1
     depends_on:
       - api
       - auth-server
@@ -241,7 +241,7 @@ services:
       lagoon.template: services/ssh/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/ssh:v1-8-2
   auth-server:
-    image: amazeeiolagoon/auth-server:master
+    image: amazeeiolagoon/auth-server:v1-8-1
     command: yarn run dev
     environment:
       - JWTISSUER=auth-server.dev
@@ -255,7 +255,7 @@ services:
       lagoon.template: services/auth-server/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/auth-server:v1-8-2
   keycloak:
-    image: amazeeiolagoon/keycloak:master
+    image: amazeeiolagoon/keycloak:v1-8-1
     user: '111111111'
     depends_on:
       - keycloak-db
@@ -266,7 +266,7 @@ services:
       lagoon.template: services/keycloak/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/keycloak:v1-8-2
   keycloak-db:
-    image: amazeeiolagoon/keycloak-db:master
+    image: amazeeiolagoon/keycloak-db:v1-8-1
     ports:
       - '3336:3306'
     labels:
@@ -274,7 +274,7 @@ services:
       lagoon.template: services/keycloak-db/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/keycloak-db:v1-8-2
   tests-kubernetes:
-    image: amazeeiolagoon/tests:master
+    image: amazeeiolagoon/tests:v1-8-1
     environment:
       - CLUSTER_TYPE=kubernetes
       - WEBHOOK_HOST=webhook-handler
@@ -299,7 +299,7 @@ services:
     labels:
       lagoon.type: none
   local-git:
-    image: amazeeiolagoon/local-git:master
+    image: amazeeiolagoon/local-git:v1-8-1
     environment:
       - GIT_AUTHORIZED_KEYS=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDEZlms5XsiyWjmnnUyhpt93VgHypse9Bl8kNkmZJTiM3Ex/wZAfwogzqd2LrTEiIOWSH1HnQazR+Cc9oHCmMyNxRrLkS/MEl0yZ38Q+GDfn37h/llCIZNVoHlSgYkqD0MQrhfGL5AulDUKIle93dA6qdCUlnZZjDPiR0vEXR36xGuX7QYAhK30aD2SrrBruTtFGvj87IP/0OEOvUZe8dcU9G/pCoqrTzgKqJRpqs/s5xtkqLkTIyR/SzzplO21A+pCKNax6csDDq3snS8zfx6iM8MwVfh8nvBW9seax1zBvZjHAPSTsjzmZXm4z32/ujAn/RhIkZw3ZgRKrxzryttGnWJJ8OFyF31JTJgwWWuPdH53G15PC83ZbmEgSV3win51RZRVppN4uQUuaqZWG9wwk2a6P5aen1RLCSLpTkd2mAEk9PlgmJrf8vITkiU9pF9n68ENCoo556qSdxW2pxnjrzKVPSqmqO1Xg5K4LOX4/9N4n4qkLEOiqnzzJClhFif3O28RW86RPxERGdPT81UI0oDAcU5euQr8Emz+Hd+PY1115UIld3CIHib5PYL9Ee0bFUKiWpR/acSe1fHB64mCoHP7hjFepGsq7inkvg2651wUDKBshGltpNkMj6+aZedNc0/rKYyjl80nT8g8QECgOSRzpmYp0zli2HpFoLOiWw== ansible-testing
     ports:
@@ -319,14 +319,14 @@ services:
   local-api-data-watcher-pusher:
     depends_on:
       - api
-    image: amazeeiolagoon/local-api-data-watcher-pusher:master
+    image: amazeeiolagoon/local-api-data-watcher-pusher:v1-8-1
     volumes:
       - ./local-dev/api-data:/api-data
       - ./local-dev/api-data-watcher-pusher:/home
     labels:
       lagoon.type: none
   local-dbaas-provider:
-    image: amazeeiolagoon/local-dbaas-provider:master
+    image: amazeeiolagoon/local-dbaas-provider:v1-8-1
     restart: always
     labels:
       lagoon.type: none
@@ -349,13 +349,13 @@ services:
     labels:
       lagoon.type: none
   local-registry:
-    image: amazeeiolagoon/local-registry:master
+    image: amazeeiolagoon/local-registry:v1-8-1
     ports:
       - '5000:5000'
     labels:
       lagoon.type: none
   drush-alias:
-    image: amazeeiolagoon/drush-alias:master
+    image: amazeeiolagoon/drush-alias:v1-8-1
     #volumes:
       #- ./services/drush-alias/web/aliases.drushrc.php.stub:/app/aliases.drushrc.php.stub
     ports:
@@ -366,7 +366,7 @@ services:
       lagoon.image: amazeeiolagoon/drush-alias:v1-8-2
       version: '2'
   logs-db:
-    image: amazeeiolagoon/logs-db:master
+    image: amazeeiolagoon/logs-db:v1-8-1
     user: '111111111'
     environment:
       KEYCLOAK_URL: http://keycloak:8080
@@ -381,14 +381,14 @@ services:
       lagoon.template: services/logs-db/.lagoon.single.yml
       lagoon.image: amazeeiolagoon/logs-db:v1-8-2
   logs-forwarder:
-    image: amazeeiolagoon/logs-forwarder:master
+    image: amazeeiolagoon/logs-forwarder:v1-8-1
     user: '111111111'
     labels:
       lagoon.type: custom
       lagoon.template: services/logs-forwarder/.lagoon.single.yml
       lagoon.image: amazeeiolagoon/logs-forwarder:v1-8-2
   logs-db-ui:
-    image: amazeeiolagoon/logs-db-ui:master
+    image: amazeeiolagoon/logs-db-ui:v1-8-1
     user: '111111111'
     ports:
       - '5601:5601'
@@ -400,14 +400,14 @@ services:
       lagoon.template: services/logs-db-ui/.lagoon.yml
       lagoon.image: amazeeiolagoon/logs-db-ui:v1-8-2
   logs-db-curator:
-    image: amazeeiolagoon/logs-db-curator:master
+    image: amazeeiolagoon/logs-db-curator:v1-8-1
     user: '111111111'
     labels:
       lagoon.type: cli
       lagoon.template: services/logs-db-curator/.lagoon.app.yml
       lagoon.image: amazeeiolagoon/logs-db-curator:v1-8-2
   logs2logs-db:
-    image: amazeeiolagoon/logs2logs-db:master
+    image: amazeeiolagoon/logs2logs-db:v1-8-1
     user: '111111111'
     command:
       - '--config.reload.automatic'
@@ -423,7 +423,7 @@ services:
       lagoon.template: services/logs2logs-db/.lagoon.yml
       lagoon.image: amazeeiolagoon/logs2logs-db:v1-8-2
   auto-idler:
-    image: amazeeiolagoon/auto-idler:master
+    image: amazeeiolagoon/auto-idler:v1-8-1
     user: '111111111'
     #volumes:
       #- './services/auto-idler/idle-services.sh:/idle-services.sh'
@@ -436,7 +436,7 @@ services:
       lagoon.template: services/auto-idler/.lagoon.yml
       lagoon.image: amazeeiolagoon/auto-idler:v1-8-2
   storage-calculator:
-    image: amazeeiolagoon/storage-calculator:master
+    image: amazeeiolagoon/storage-calculator:v1-8-1
     user: '111111111'
     #volumes:
       #- './services/storage-calculator/calculate-storage.sh:/calculate-storage.sh'
@@ -451,7 +451,7 @@ services:
       lagoon.template: services/logs-collector/.lagoon.yml
       lagoon.rollout: daemonset
   harbor-core:
-    image: amazeeiolagoon/harbor-core:master
+    image: amazeeiolagoon/harbor-core:v1-8-1
     hostname: harbor-core
     volumes:
       - ${PWD}/local-dev/harbor-core-ci_app.conf:/etc/core/app.conf
@@ -517,7 +517,7 @@ services:
       lagoon.template: services/harbor-core/harbor-core.yml
       lagoon.image: amazeeiolagoon/harbor-core:v1-8-2
   harbor-database:
-    image: amazeeiolagoon/harbor-database:master
+    image: amazeeiolagoon/harbor-database:v1-8-1
     hostname: harbor-database
     ports:
       - '5432:5432'
@@ -531,7 +531,7 @@ services:
       lagoon.template: services/harbor-database/harbor-database.yml
       lagoon.image: amazeeiolagoon/harbor-database:v1-8-2
   harbor-jobservice:
-    image: amazeeiolagoon/harbor-jobservice:master
+    image: amazeeiolagoon/harbor-jobservice:v1-8-1
     hostname: harbor-jobservice
     ports:
       - '8083:8080'
@@ -560,7 +560,7 @@ services:
       lagoon.template: services/harbor-jobservice/harbor-jobservice.yml
       lagoon.image: amazeeiolagoon/harbor-jobservice:v1-8-2
   harbor-nginx:
-    image: amazeeiolagoon/harbor-nginx:master
+    image: amazeeiolagoon/harbor-nginx:v1-8-1
     hostname: harbor-nginx
     ports:
       - '8084:8080'
@@ -576,7 +576,7 @@ services:
       lagoon.template: services/harbor-nginx/harbor-nginx.yml
       lagoon.image: amazeeiolagoon/harbor-nginx:v1-8-2
   harbor-portal:
-    image: amazeeiolagoon/harbor-portal:master
+    image: amazeeiolagoon/harbor-portal:v1-8-1
     hostname: harbor-portal
     ports:
       - '8085:8080'
@@ -586,7 +586,7 @@ services:
       lagoon.template: services/harbor-portal/harbor-portal.yml
       lagoon.image: amazeeiolagoon/harbor-portal:v1-8-2
   harbor-redis:
-    image: amazeeiolagoon/harbor-redis:master
+    image: amazeeiolagoon/harbor-redis:v1-8-1
     hostname: harbor-redis
     volumes:
       - /var/lib/redis
@@ -596,7 +596,7 @@ services:
       lagoon.template: services/harbor-redis/harbor-redis.yml
       lagoon.image: amazeeiolagoon/harbor-redis:v1-8-2
   harbor-trivy:
-    image: amazeeiolagoon/harbor-trivy:master
+    image: amazeeiolagoon/harbor-trivy:v1-8-1
     hostname: harbor-trivy
     volumes:
       - /tmp
@@ -628,7 +628,7 @@ services:
       lagoon.name: harbor-trivy
       lagoon.image: amazeeiolagoon/harbor-trivy:v1-8-2
   harborregistry:
-    image: amazeeiolagoon/harborregistry:master
+    image: amazeeiolagoon/harborregistry:v1-8-1
     hostname: harborregistry
     volumes:
       - ${PWD}/local-dev/harborregistry-ci_config.yaml:/etc/registry/config.yml
@@ -650,7 +650,7 @@ services:
       lagoon.name: harborregistry
       lagoon.image: amazeeiolagoon/harborregistry:v1-8-2
   harborregistryctl:
-    image: amazeeiolagoon/harborregistryctl:master
+    image: amazeeiolagoon/harborregistryctl:v1-8-1
     hostname: harborregistryctl
     volumes:
       - ${PWD}/local-dev/harborregistryctl-ci_config.yaml:/etc/registryctl/config.yml
@@ -665,7 +665,7 @@ services:
       lagoon.name: harborregistry
       lagoon.image: amazeeiolagoon/harborregistryctl:v1-8-2
   api-redis:
-    image: amazeeiolagoon/api-redis:master
+    image: amazeeiolagoon/api-redis:v1-8-1
     labels:
       lagoon.type: custom
       lagoon.template: services/api-redis/.lagoon.app.yml
