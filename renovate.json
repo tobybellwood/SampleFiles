@@ -20,10 +20,9 @@
                 "^Dockerfile.php-cli$"
             ],
             "matchStrings": [
-                "php.*--require=drush/drush:(?<currentValue>.*?).*\n"
+                "php.*--require=(?<depName>.*?):(?<currentValue>.*?).*\n"
             ],
-            "depNameTemplate": "drush/drush",
-            "datasourceTemplate": "github-releases"
+            "datasourceTemplate": "packagist"
         },
         {
             "fileMatch": [
